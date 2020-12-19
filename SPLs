@@ -1,3 +1,9 @@
 # Used this one to pick out Splunk events that I wanted to delete from my index (tests and the like). 
 index=_* OR index=* sourcetype=katchi_speed timeformat="%Y-%m-%dT%H:%M:%S.%Q-08:00" latest="2020-12-16T18:53:00.000-08:00"
 
+
+# this regex used in Splunk to populate extractions for "up/download" "customer IP" and "latency" metrics
+Testing from\s.*\((?<customer_ip>\d+\.\d+\.\d+\.\d+)\).*
+Hosted\s.*\]\:\s(?P<latency>\d+\.\d+)\sms
+Download\:\s(?P<download>\d+\.\d+)\sMbit\/s
+Upload\:\s(?P<upload>\d+\.\d+)\sMbit\/s
