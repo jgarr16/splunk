@@ -7,3 +7,7 @@ Testing from\s.*\((?<customer_ip>\d+\.\d+\.\d+\.\d+)\).*
 Hosted\s.*\]\:\s(?P<latency>\d+\.\d+)\sms
 Download\:\s(?P<download>\d+\.\d+)\sMbit\/s
 Upload\:\s(?P<upload>\d+\.\d+)\sMbit\/s
+
+# it's actually a bash thing, but I'm using it for Splunk, so... 
+
+logger katchi_syn -P 9997 --udp "2020-12-21T12:00:00.000-08:00 more Testing tonight"
