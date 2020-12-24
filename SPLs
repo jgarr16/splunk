@@ -13,5 +13,5 @@ Upload\:\s(?P<upload>\d+\.\d+)\sMbit\/s
 # for internal use: 
 logger katchi_syn -P 9997 --udp "2020-12-21T12:00:00.000-08:00 more Testing tonight"
 
-# for external use:
-echo "2020-12-20T12:00:00.000-08:00 Testing tonight" | nc -u katchi_syn 9997
+# for external use - the `-w 1` option for nc allows nc to quit gracefully:
+echo "2020-12-20T12:00:00.000-08:00 Testing tonight" | nc -w 1 -u katchi_syn 9997
