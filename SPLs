@@ -15,3 +15,5 @@ logger katchi_syn -P 9997 --udp "2020-12-21T12:00:00.000-08:00 more Testing toni
 
 # for external use - the `-w 1` option for nc allows nc to quit gracefully:
 echo "2020-12-20T12:00:00.000-08:00 Testing tonight" | nc -w 1 -u katchi_syn 9997
+# and one for Comcast Xfinity monthly usage - this one is manual right now:
+echo "2020-12-25T05:45:00.000-08:00 Xfinity usage: 993 GB" | nc -w 1 -u 192.168.1.107 9994
